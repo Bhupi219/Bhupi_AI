@@ -1,0 +1,55 @@
+# ---------------- Core Deep Learning ----------------
+torch==2.9.0.dev20250818+cu128   # PyTorch nightly (CUDA 12.8, sm_120 GPU support)
+torchvision                      # Image utils (for future vision tasks)
+torchaudio                       # Audio utilities (speech/audio tasks)
+
+# ---------------- Data & ML Stack ----------------
+numpy                            # Numerical computing
+scipy                            # Scientific computing (signal, stats, optimization)
+pandas                           # DataFrames for structured memory/logs
+scikit-learn                     # ML utilities & metrics
+tqdm                             # Progress bars
+
+# ---------------- Hugging Face Ecosystem ----------------
+transformers                     # Pretrained LLMs & ASR models
+datasets                         # Dataset loader
+accelerate                       # Multi-GPU/efficient training
+sentencepiece                    # Tokenizers
+huggingface_hub                  # Hugging Face model hub
+evaluate                         # Evaluation metrics
+bitsandbytes                     # 4/8-bit quantization for big LLMs
+
+# ---------------- Speech ----------------
+openai-whisper                   # Whisper ASR
+soundfile                        # Audio file I/O
+librosa                          # Audio processing
+TTS                              # Coqui TTS (realistic voice synthesis)
+gTTS                             # Google TTS (lightweight fallback)
+pyaudio                          # Real-time mic input/output
+SpeechRecognition                # Alternative STT engine
+speechbrain                      # Extra speech models (speaker ID, enhancement)
+pydub                            # Audio editing (split, merge, convert)
+ffmpeg-python                    # Audio/video backend wrapper
+
+# ---------------- Assistant Orchestration ----------------
+langchain                        # Memory + tool usage (optional, powerful for AI assistants)
+faiss-cpu                        # Vector search (assistant memory / RAG)
+weaviate-client                  # Alternative vector DB client
+
+# ---------------- Utilities ----------------
+requests                         # API calls
+fastapi                          # Lightweight API server (optional for exposing assistant)
+uvicorn                          # ASGI server for FastAPI
+python-dotenv                    # Manage secrets/keys
+rich                             # Pretty console logging
+psutil                           # Monitor CPU, RAM, GPU usage
+
+# --- Vision & Multimodal ---
+opencv-python                    # Webcam, screen capture, video processing
+Pillow                           # Image manipulation
+pyautogui                        # Screen automation (mouse/keyboard)
+mss                              # Fast screen capture (better than opencv for full screen)
+pytesseract                      # OCR (read text from screen/images)
+mediapipe                        # Hand/face/pose detection
+facenet-pytorch                  # Face recognition
+

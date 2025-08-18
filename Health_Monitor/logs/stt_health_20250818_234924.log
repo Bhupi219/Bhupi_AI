@@ -1,0 +1,13 @@
+2025-08-18 23:49:24,739 - STTHealthMonitor - INFO - STT Health Monitor initialized
+2025-08-18 23:49:37,456 - STTHealthMonitor - INFO - STT monitoring started
+2025-08-18 23:49:38,459 - STTHealthMonitor - WARNING - High memory usage: 1220.2 MB
+2025-08-18 23:49:41,219 - STTHealthMonitor - INFO - Transcription: 'you...' | Time: 1.68s | Lang: en | Confidence: 0.80
+2025-08-18 23:49:41,466 - STTHealthMonitor - WARNING - High memory usage: 1914.1 MB
+2025-08-18 23:49:41,917 - STTHealthMonitor - INFO - Transcription: 'حلو...' | Time: 0.24s | Lang: ar | Confidence: 0.80
+2025-08-18 23:49:44,472 - STTHealthMonitor - WARNING - High memory usage: 1915.4 MB
+2025-08-18 23:49:44,972 - STTHealthMonitor - INFO - Transcription: 'Hello....' | Time: 0.17s | Lang: en | Confidence: 0.80
+2025-08-18 23:49:47,480 - STTHealthMonitor - WARNING - High memory usage: 1930.1 MB
+2025-08-18 23:49:48,413 - STTHealthMonitor - INFO - Transcription: 'Bye....' | Time: 0.17s | Lang: en | Confidence: 0.80
+2025-08-18 23:49:50,484 - STTHealthMonitor - WARNING - High memory usage: 1930.2 MB
+2025-08-18 23:49:53,382 - STTHealthMonitor - INFO - STT monitoring stopped
+2025-08-18 23:49:53,387 - STTHealthMonitor - INFO - Metrics exported to: /home/bhupendra_singh/Projects/Bhupi_AI/Health_Monitor/exports/stt_metrics_20250818_234953.json

@@ -1,0 +1,145 @@
+{
+  "export_timestamp": "2025-08-18T23:49:53.386592",
+  "health_summary": {
+    "system_status": {
+      "uptime_hours": 0.004425031079186334,
+      "total_transcriptions": 4,
+      "total_errors": 0,
+      "error_rate": 0.0
+    },
+    "performance": {
+      "avg_processing_time": 0.5664466023445129,
+      "max_processing_time": 1.6844563484191895,
+      "avg_cpu_usage": 1.1333333333333335,
+      "max_cpu_usage": 3.3,
+      "avg_memory_usage_mb": 1844.4214409722222,
+      "max_memory_usage_mb": 1930.18359375
+    },
+    "language_distribution": {
+      "en": 3,
+      "ar": 1
+    },
+    "recent_errors": [],
+    "thresholds": {
+      "max_processing_time": 5.0,
+      "max_cpu_usage": 80.0,
+      "max_memory_usage": 1024,
+      "max_queue_size": 50,
+      "min_confidence": 0.3
+    },
+    "alerts": [
+      "High memory usage: 1930.2 MB"
+    ]
+  },
+  "metrics_history": [
+    {
+      "timestamp": 1755560978.4598804,
+      "processing_time": 0.0,
+      "audio_duration": 0.0,
+      "text_length": 0,
+      "language_detected": "system_check",
+      "confidence_score": 1.0,
+      "cpu_usage": 0.2,
+      "memory_usage": 1220.17578125,
+      "queue_size": 0,
+      "error_count": 0
+    },
+    {
+      "timestamp": 1755560981.2193713,
+      "processing_time": 1.6844563484191895,
+      "audio_duration": 0.1,
+      "text_length": 3,
+      "language_detected": "en",
+      "confidence_score": 0.8,
+      "cpu_usage": 0.0,
+      "memory_usage": 1914.11328125,
+      "queue_size": 83,
+      "error_count": 0
+    },
+    {
+      "timestamp": 1755560981.4666965,
+      "processing_time": 0.0,
+      "audio_duration": 0.0,
+      "text_length": 0,
+      "language_detected": "system_check",
+      "confidence_score": 1.0,
+      "cpu_usage": 3.3,
+      "memory_usage": 1914.11328125,
+      "queue_size": 0,
+      "error_count": 0
+    },
+    {
+      "timestamp": 1755560981.9166331,
+      "processing_time": 0.23630905151367188,
+      "audio_duration": 0.58,
+      "text_length": 3,
+      "language_detected": "ar",
+      "confidence_score": 0.8,
+      "cpu_usage": 2.2,
+      "memory_usage": 1915.40625,
+      "queue_size": 11,
+      "error_count": 0
+    },
+    {
+      "timestamp": 1755560984.4730012,
+      "processing_time": 0.0,
+      "audio_duration": 0.0,
+      "text_length": 0,
+      "language_detected": "system_check",
+      "confidence_score": 1.0,
+      "cpu_usage": 0.8,
+      "memory_usage": 1915.40625,
+      "queue_size": 0,
+      "error_count": 0
+    },
+    {
+      "timestamp": 1755560984.9717815,
+      "processing_time": 0.17043805122375488,
+      "audio_duration": 0.66,
+      "text_length": 6,
+      "language_detected": "en",
+      "confidence_score": 0.8,
+      "cpu_usage": 0.9,
+      "memory_usage": 1930.10546875,
+      "queue_size": 8,
+      "error_count": 0
+    },
+    {
+      "timestamp": 1755560987.4809978,
+      "processing_time": 0.0,
+      "audio_duration": 0.0,
+      "text_length": 0,
+      "language_detected": "system_check",
+      "confidence_score": 1.0,
+      "cpu_usage": 0.8,
+      "memory_usage": 1930.10546875,
+      "queue_size": 0,
+      "error_count": 0
+    },
+    {
+      "timestamp": 1755560988.4129558,
+      "processing_time": 0.17458295822143555,
+      "audio_duration": 0.54,
+      "text_length": 4,
+      "language_detected": "en",
+      "confidence_score": 0.8,
+      "cpu_usage": 0.9,
+      "memory_usage": 1930.18359375,
+      "queue_size": 8,
+      "error_count": 0
+    },
+    {
+      "timestamp": 1755560990.4846375,
+      "processing_time": 0.0,
+      "audio_duration": 0.0,
+      "text_length": 0,
+      "language_detected": "system_check",
+      "confidence_score": 1.0,
+      "cpu_usage": 1.1,
+      "memory_usage": 1930.18359375,
+      "queue_size": 0,
+      "error_count": 0
+    }
+  ],
+  "error_history": []
+}
