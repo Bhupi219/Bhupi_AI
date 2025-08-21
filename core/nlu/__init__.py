@@ -9,10 +9,10 @@ __description__ = "Friend AI NLU System - Conversational AI with personality"
 
 # Import main components
 try:
-    from .nlu_main import FriendAINLU, ConversationResponse
-    from .friend_persona import FriendPersona, ConversationMood
-    from .qwen_handler import QwenHandler
-    from .config import NLUConfig, get_quick_config
+    from nlu_main import FriendAINLU, ConversationResponse
+    from friend_persona import FriendPersona, ConversationMood
+    from qwen_handler import QwenHandler
+    from config import NLUConfig, get_quick_config
     
     __all__ = [
         'FriendAINLU',
@@ -37,7 +37,7 @@ except ImportError as e:
     print("  - nlu_main.py")
     print("  - friend_persona.py") 
     print("  - qwen_handler.py")
-    print("  - nlu_config.py")
+    print("  - config.py")
 
 
 def get_version():
@@ -76,7 +76,8 @@ def quick_setup():
         nlu = FriendAINLU(
             model_path=config.MODEL_CONFIG["model_name"],
             device=config.MODEL_CONFIG["device"],
-            memory_folder=str(config.MEMORY_PATH)
+            memory_folder=str(config.MEMORY_PATH),
+            config=config
         )
         
         print("✅ Friend AI NLU setup complete!")
@@ -101,7 +102,7 @@ def print_welcome():
     if _PACKAGE_AVAILABLE:
         print("✅ All components loaded successfully!")
         print("\nQuick start:")
-        print("  from nlu import quick_setup")
+        print("  from __init__ import quick_setup")
         print("  nlu = quick_setup()")
         print("  await nlu.initialize()")
     else:
@@ -120,7 +121,7 @@ def example_usage():
     example_code = '''
 # Example: Using Friend AI NLU System
 import asyncio
-from nlu import quick_setup
+from __init__ import quick_setup
 
 async def main():
     # Quick setup

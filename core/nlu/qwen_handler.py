@@ -22,7 +22,7 @@ class QwenHandler:
         # Import config here to avoid circular imports
         if config is None:
             try:
-                from .config import get_quick_config
+                from config import get_quick_config
                 config = get_quick_config()
             except ImportError:
                 config = None
@@ -80,7 +80,7 @@ class QwenHandler:
                 self.logger.info(f"✅ Found local model at: {self.model_path}")
                 model_source = self.model_path
             else:
-                self.logger.info(f"📥 Local model not found, will download from HuggingFace: {self.model_path}")
+                self.logger.info(f"🔥 Local model not found, will download from HuggingFace: {self.model_path}")
                 model_source = self.model_path
             
             # Load tokenizer
@@ -205,7 +205,7 @@ class QwenHandler:
     def clear_history(self):
         """Clear conversation history"""
         self.conversation_history = []
-        self.logger.info("🔄 Conversation history cleared")
+        self.logger.info("🔥 Conversation history cleared")
     
     def get_model_info(self) -> Dict:
         """Get model information"""

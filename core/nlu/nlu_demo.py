@@ -11,14 +11,15 @@ import time
 from typing import List, Dict
 
 # Add the current directory to Python path for imports
-# Adjust these imports based on your actual file structure
+# Direct imports from same directory
 try:
     from config import get_quick_config, setup_for_development
     from nlu_main import FriendAINLU
     from friend_persona import ConversationMood
-except ImportError:
-    print("❌ Import error: Make sure all NLU files are in the same directory")
-    print("Required files: nlu_config.py, nlu_main.py, friend_persona.py, qwen_handler.py")
+except ImportError as e:
+    print(f"❌ Import error: {e}")
+    print("Make sure all NLU files are in the same directory")
+    print("Required files: config.py, nlu_main.py, friend_persona.py, qwen_handler.py")
     sys.exit(1)
 
 class FriendAIDemo:
@@ -78,7 +79,7 @@ class FriendAIDemo:
     async def initialize_system(self) -> bool:
         """Initialize the Friend AI NLU system"""
         print("🚀 Initializing Friend AI NLU System...")
-        print(f"📍 Project path: {self.config.PROJECT_ROOT}")
+        print(f"📁 Project path: {self.config.PROJECT_ROOT}")
         print(f"🤖 Models path: {self.config.MODELS_BASE_PATH}")
         
         # Validate model path
@@ -93,7 +94,7 @@ class FriendAIDemo:
                 print(f"  ⚠️  Model directory exists but missing essential files")
         else:
             print(f"  ❌ Local model not found: {self.config.MODEL_CONFIG['model_path']}")
-            print(f"  📥 Will download from HuggingFace: {self.config.MODEL_CONFIG['huggingface_name']}")
+            print(f"  🔥 Will download from HuggingFace: {self.config.MODEL_CONFIG['huggingface_name']}")
         
         print(f"💾 Memory path: {self.config.MEMORY_PATH}")
         
@@ -189,7 +190,7 @@ class FriendAIDemo:
                     continue
                 elif user_input.lower() == 'clear':
                     self.nlu_system.clear_conversation_history()
-                    print("🔄 Conversation history cleared!")
+                    print("🔥 Conversation history cleared!")
                     conversation_count = 0
                     continue
                 elif user_input.lower() == 'config':

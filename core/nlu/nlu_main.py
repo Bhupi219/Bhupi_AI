@@ -10,9 +10,9 @@ from datetime import datetime
 import json
 import os
 
-# Import our components (adjust imports based on your file structure)
-from .qwen_handler import QwenHandler
-from .friend_persona import FriendPersona, ConversationMood
+# Import our components (direct imports from same directory)
+from qwen_handler import QwenHandler
+from friend_persona import FriendPersona, ConversationMood
 
 @dataclass
 class ConversationResponse:
@@ -41,7 +41,7 @@ class FriendAINLU:
         
         # Import and setup config
         if config is None:
-            from .config import get_quick_config
+            from config import get_quick_config
             config = get_quick_config()
         
         self.config = config
@@ -66,7 +66,7 @@ class FriendAINLU:
         self.conversation_count = 0
         
         # Configuration
-        self.config = {
+        self.system_config = {
             "max_response_length": 512,
             "temperature": 0.7,
             "response_creativity": 0.8,
@@ -95,8 +95,8 @@ class FriendAINLU:
             
             # Update generation config
             self.qwen.update_generation_config(
-                max_new_tokens=self.config["max_response_length"],
-                temperature=self.config["temperature"],
+                max_new_tokens=self.system_config["max_response_length"],
+                temperature=self.system_config["temperature"],
                 top_p=0.9
             )
             
@@ -369,15 +369,15 @@ class FriendAINLU:
             self.conversation_count = 0
             self.current_mood = ConversationMood.CASUAL
             
-            self.logger.info("🔄 Conversation history cleared")
+            self.logger.info("🔥 Conversation history cleared")
             
         except Exception as e:
             self.logger.error(f"❌ Failed to clear history: {str(e)}")
     
     def update_config(self, **kwargs):
         """Update system configuration"""
-        old_config = self.config.copy()
-        self.config.update(kwargs)
+        old_config = self.system_config.copy()
+        self.system_config.update(kwargs)
         
         # Update Qwen config if relevant parameters changed
         qwen_params = {}
@@ -390,7 +390,7 @@ class FriendAINLU:
             self.qwen.update_generation_config(**qwen_params)
         
         self.logger.info(f"🔧 Config updated: {kwargs}")
-        return {"old_config": old_config, "new_config": self.config}
+        return {"old_config": old_config, "new_config": self.system_config}
     
     def get_system_info(self) -> Dict:
         """Get comprehensive system information"""
@@ -403,7 +403,7 @@ class FriendAINLU:
                 "memory_folder": self.memory_folder
             },
             "qwen_model": self.qwen.get_model_info(),
-            "configuration": self.config,
+            "configuration": self.system_config,
             "conversation_stats": self.get_conversation_stats()
         }
     
